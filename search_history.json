@@ -1,0 +1,37 @@
+[
+  {
+    "keyword": "shirt",
+    "results": 2,
+    "timestamp": "2025-07-25T05:59:04.225955"
+  },
+  {
+    "keyword": "bag",
+    "results": 1,
+    "timestamp": "2025-07-25T06:09:37.188537"
+  },
+  {
+    "keyword": "laptop",
+    "results": 1,
+    "timestamp": "2025-07-25T06:09:46.367422"
+  },
+  {
+    "keyword": "shirt",
+    "results": 2,
+    "timestamp": "2025-07-28T06:14:30.216047"
+  },
+  {
+    "keyword": "shirt",
+    "results": 2,
+    "timestamp": "2025-07-28T06:15:45.396274"
+  },
+  {
+    "keyword": "bag",
+    "results": 1,
+    "timestamp": "2025-07-28T06:16:11.147596"
+  },
+  {
+    "keyword": "bag",
+    "results": 1,
+    "timestamp": "2025-07-28T06:18:41.548024"
+  }
+]
