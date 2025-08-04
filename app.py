@@ -41,8 +41,10 @@ if st.session_state.search_history:
     ]
     selected_index = st.selectbox("Select a previous search:", options, index=None)
 
-        if selected_index is not None:
-            selected = st.session_state.search_history[options.index(selected_index)]
+    if selected_index is not None:
+        # Find the index of the selected option in the options list
+        option_index = options.index(selected_index)
+        selected = st.session_state.search_history[option_index]
 
     # Repeat Last Search Button
     if st.button("🔁 Repeat Last Search"):
