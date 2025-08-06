@@ -12,6 +12,24 @@ st.title("🧠 AI Product Analyzer")
 st.markdown("Easily search, analyze, and export products using AI.")
 st.markdown("---")
 
+# ----------------- ℹ️ About this App -----------------
+with st.sidebar.expander("ℹ️ About this App"):
+    st.markdown("""
+    **AI Product Analyzer** lets you:
+    - 🔍 Search products by keyword, category, and price
+    - 🧠 Get smart AI product recommendations
+    - 📁 Export and download matched products
+    - 📜 View and repeat your past searches
+
+    **Powered by**:
+    - 🐍 Python & Streamlit
+    - 🤖 OpenAI GPT-3.5
+    - 🛍️ FakeStore API (for product data)
+
+    _Try keywords like 'shirt', 'laptop', 'bag' to explore the features._
+    """)
+
+
 # ----------------- 🔍 Session State Init -----------------
 if "matches" not in st.session_state:
     st.session_state.matches = []
@@ -55,6 +73,13 @@ if st.session_state.search_history:
             st.session_state.selected_category = last["category"]
             st.session_state.max_price = last["max_price"]
             st.rerun()
+
+    if st.session_state.search_history:
+        if st.button("🧹 Clear Search History"):
+            st.session_state.search_history = []
+            st.success("Search history cleared.")
+            st.rerun()  # Refresh UI
+
 
     # ----------------- 🔍 Search Input -----------------
 keyword = st.text_input(
