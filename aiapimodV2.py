@@ -5,11 +5,11 @@ import os
 from datetime import datetime
 
 #AI API Key
-api_key = os.getenv("Oz API Key")
+api_key = os.getenv("Oz_API_Key")
 
 
 def real_ai_recommendations(matches, keyword):
-  api_key = os.getenv("Oz API Key")
+  api_key = os.getenv("Oz_API_Key")
   client = openai.OpenAI(api_key=api_key)
 
   prompt = build_prompt(matches, keyword)
